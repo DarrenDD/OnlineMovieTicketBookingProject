@@ -253,7 +253,7 @@ namespace OnlineMovieTicketBookingProject.Data.Migrations
 
                     b.HasIndex("MovieDetailsId");
 
-                    b.ToTable("BookingTable");
+                    b.ToTable("BookingTable", (string)null);
                 });
 
             modelBuilder.Entity("OnlineMovieTicketBookingProject.Models.Cart", b =>
@@ -283,7 +283,7 @@ namespace OnlineMovieTicketBookingProject.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cart");
+                    b.ToTable("Cart", (string)null);
                 });
 
             modelBuilder.Entity("OnlineMovieTicketBookingProject.Models.MovieDetails", b =>
@@ -311,7 +311,7 @@ namespace OnlineMovieTicketBookingProject.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MovieDetails");
+                    b.ToTable("MovieDetails", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

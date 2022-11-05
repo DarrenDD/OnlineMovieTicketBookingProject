@@ -1,6 +1,8 @@
 ﻿using FileUploadControl;
 using Microsoft.AspNetCore.Mvc;
 using OnlineMovieTicketBookingProject.Data;
+using OnlineMovieTicketBookingProject.Models;
+using OnlineMovieTicketBookingProject.Views.ViewModels;
 
 namespace OnlineMovieTicketBookingProject.Areas.Admin.Controllers
 {
@@ -24,6 +26,23 @@ namespace OnlineMovieTicketBookingProject.Areas.Admin.Controllers
         public IActionResult Create()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult Create(IList<IFormFile> files, MovieDetailViewModel vmodel, MovieDetails movie)
+        {
+            movie.Movie_Name = vmodel.Name;
+            movie.Movie_Description = vmodel.Descritpion;
+            movie.DateAndTime = vmodel.DateOfMovie;
+            foreach (var item in files)
+            {
+                movie.MoviePicture = "~/uploads/" + item.FileName.Trim();
+            }
+            _upload.uploadFileMultiple(files);
+            _context.MovieDetails.Add(movie);
+            _context.SaveChanges();
+            TempData["Success"] = "Movie has been Saved!";
+            return RedirectToAction("Create", "Admin");
+            
         }
     }
 }

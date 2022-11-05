@@ -14,7 +14,6 @@ namespace OnlineMovieTicketBookingProject.Data
 
         public DbSet<BookingTable> BookingTable { get; set; }
         public DbSet<MovieDetails> MovieDetails { get; set; }
-        public DbSet<Cart> Cart { get; set; }
-        public DbSet<OnlineMovieTicketBookingProject.Views.ViewModels.MovieDetailViewModel> MovieDetailViewModel { get; set; }
+        public DbSet<Cart> Cart { get; set; }        
     }
 }

@@ -26,7 +26,7 @@ namespace FileUploadControl
                 {
                     using (Stream input = item.OpenReadStream())
                     {
-                        long totalReadBytes = 0;
+                        
                         int readBytes;
                         while ((readBytes = input.Read(buffer, 0, buffer.Length)) > 0)
                         {
@@ -41,10 +41,12 @@ namespace FileUploadControl
         private string GetpathAndFileName(string filename)
         {
             string path = this.hostingEnvironment.WebRootPath + "\\uploads";
-            if (!Directory.Exists(path))
-            
+            if (!Directory.Exists(path))            
                 Directory.CreateDirectory(path);
+
                 return path + filename;
+            
+                
             
         }
     }
