@@ -1,3 +1,4 @@
+using FileUploadControl;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using OnlineMovieTicketBookingProject.Data;
@@ -12,6 +13,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddTransient<UploadInterface, uploadfilerepo>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

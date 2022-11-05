@@ -7,5 +7,6 @@
         public string Movie_Description { get; set; }
         public DateTime DateAndTime { get; set; }
         public string MoviePicture { get; set; }
+        public virtual ICollection<BookingTable> Bookings { get; set; }
     }
 }

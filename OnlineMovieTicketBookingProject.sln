@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineMovieTicketBookingProject", "OnlineMovieTicketBookingProject\OnlineMovieTicketBookingProject.csproj", "{50360277-0460-4295-A217-83AC4C7A2595}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUploadControl", "FileUploadControl\FileUploadControl.csproj", "{FF22702B-5283-48B4-B135-6AAF941D027C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{50360277-0460-4295-A217-83AC4C7A2595}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50360277-0460-4295-A217-83AC4C7A2595}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50360277-0460-4295-A217-83AC4C7A2595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF22702B-5283-48B4-B135-6AAF941D027C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF22702B-5283-48B4-B135-6AAF941D027C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF22702B-5283-48B4-B135-6AAF941D027C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF22702B-5283-48B4-B135-6AAF941D027C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
